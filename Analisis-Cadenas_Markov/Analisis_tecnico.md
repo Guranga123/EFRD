@@ -3,7 +3,12 @@
 ### 1. El Hallazgo: Homeostasis de Estado Estacionario
 
 Tras someter al **Protocolo EFRD v3.2** a una simulación de transición de estados. 
-Con $$P = \begin{pmatrix} 0.70 & 0.25 & 0.04 & 0.01 \\ 0.15 & 0.70 & 0.12 & 0.03 \\ 0.05 & 0.15 & 0.75 & 0.05 \\ 0.01 & 0.04 & 0.15 & 0.80 \end{pmatrix}$$
+Con P = [
+  0.70  0.25  0.04  0.01
+  0.15  0.70  0.12  0.03
+  0.05  0.15  0.75  0.05
+  0.01  0.04  0.15  0.80
+]
 
 Donde las columnas equivalen a los estados (de izq. a drcha.): Vulnerable (clase baja), equilibrio (clase media), consolidado (clase media) y alto impacto (clase alta)
 

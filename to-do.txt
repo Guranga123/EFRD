@@ -1,0 +1,15 @@
+Hay q añadir un ajustador de k_base automático, si el de entra-
+da excede lo que se puede abordar económicamente, entonces k_base disminuye al mínimo posible 
+para poder donar todas las ayudas necesarias.
+
+Actualmente usamos "rentas medias" para los 4 estratos ($S_0$ a $S_3$). En un servidor ministerial, el sistema no debería estimar, sino iterar sobre el censo real.
+
+Hay q añadir un método de la clase que acepte un DataFrame o una conexión SQL para procesar millones de registros individuales (usando pandas o numpy) por medio del INE y la Hacienda.
+
+El coste de las ayudas debe ser la suma de los saldos negativos tras cruzar los ingresos brutos reales con el $k_{hogar}$ de cada familia.
+
+Como el coste de vida es diferente en cada zona del país, hay q añadir una constante de proporcionalidad que, a través del código postal de cada ciudadano, se le aplique un nuevo k_base.
+
+La idea es q el dinero sobrante se depositase en una tarjeta con la cual solo se puede comprar nos productos específicos
+
+Una vez hecho esto, pasaría a la versión v4.0

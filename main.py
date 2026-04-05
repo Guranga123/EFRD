@@ -1,23 +1,26 @@
 from EFRD import EFRD_Protocol_v3_2, EFRD_AdvancedVisualizer
 from numpy import linspace
 from math import exp
-
+from traductores import get_pib_nominal_precios_corrientes, get_IPC_mas_reciente
 
 # Datos macroeconómicos de entrada
 # Ya no necesitamos diccionarios de población ni gammas manuales.
 # El sistema leerá a los contribuyentes desde 'outputs/base_final_efrd.db'
 
-PIB_actual = 5000
+PIB_anyo, PIB_valor = get_pib_nominal_precios_corrientes()
+IPC_anyo, IPC_valor = get_IPC_mas_reciente()
 gastos_operativos_estado = 0
 path_db = "conexion/outputs/base_final_efrd.db"
-
+print(f"PIB más reciente (año {PIB_anyo}): {PIB_valor} €")
+print(f"IPC más reciente (año {IPC_anyo}): {IPC_valor}")
 print("Iniciando motor EFRD. Procesando base de datos catastral...")
 motor = EFRD_Protocol_v3_2(
-    PIB_Y=PIB_actual, 
+    PIB_Y=PIB_valor, 
     Gini=0.33, 
     Alpha=0.05,
     Sigma=1.5, 
-    Limite_L=0.80, 
+    Limite_L=0.80,
+    IPC_Pi=IPC_valor, 
     G_op=gastos_operativos_estado, 
     db_path = path_db
 )

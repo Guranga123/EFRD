@@ -9,7 +9,7 @@ from os import path
 from math import exp, ceil
 
 class EFRD_Protocol_v3_2:
-    def __init__(self, PIB_Y, Gini, Alpha, Sigma, Limite_L, G_op, IPC_Pi=1.0, db_path='outputs/base_final_efrd.db'):
+    def __init__(self, PIB_Y, Gini, Alpha, Sigma, Limite_L, G_op, IPC_Pi, db_path='outputs/base_final_efrd.db'):
         # Parámetros de configuración
         self.Y = PIB_Y
         self.G = Gini   

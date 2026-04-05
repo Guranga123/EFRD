@@ -1,4 +1,4 @@
-# EFRD (Equilibrio Fiscal Y Resiliencia Distributiva)
+# EFRD (Equilibrio Fiscal Y Resiliencia Distributiva) v4.0
 
 Una de las ventajas que ofrece este sistema es que elimina los saltos de los tramos del IRPF. Esto se logra gracias a una **Curva de transferencia continua y asintótica**. Esto garantiza que nunca se gane menos trabajando más y que la progresividad sea infinita.
 ## Conceptos Clave
